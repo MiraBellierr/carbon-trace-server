@@ -47,6 +47,9 @@ db.run(`CREATE TABLE IF NOT EXISTS order_items (
 )`);
 
 // Routes
+app.get('/', (req, res) => {
+  res.json({ status: "API is running"});
+});
 
 // Get all orders with their items
 app.get('/api/orders', (req, res) => {
